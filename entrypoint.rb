@@ -5,7 +5,7 @@ when 'ola'
 when 'server'
     system('rm -rf ./tmp/pids/server.pid')
     system("bundle exec rails s -p 3000 -b 0.0.0.0")
-when 'new'
+when 'create'
     if system('bundle exec rails new . --force --database=postgresql')
         system('mv ./config/database.yml ./config/database_old.yml')
         system('cp ./container_files/postgres_db.yml ./config/database.yml')
