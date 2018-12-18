@@ -8,7 +8,7 @@ when 'server'
 when 'create'
     if system('bundle exec rails new . --force --database=postgresql')
         system('mv ./config/database.yml ./config/database_old.yml')
-        system('cp ./container_files/postgres_db.yml ./config/database.yml')
+        system('cp /app/container_files/postgres_db.yml ./config/database.yml')
         system('bundle exec rails db:create')
     end
 else
