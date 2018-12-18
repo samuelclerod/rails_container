@@ -8,8 +8,7 @@ when 'server'
 when 'create'
     system('bundle exec rails new . --force --database=postgresql')
     system('mv ./config/database.yml ./config/database_old.yml')
-    system('cp /app/container_files/database.yml ./config/')
-    system('chmod 777 ./config/database.yml')
+    system('cp ./container_files/database.yml ./config/')
     system('bundle exec rails db:create')
 else
     exec(ARGV.join(" "))
