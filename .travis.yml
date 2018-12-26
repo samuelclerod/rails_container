@@ -7,4 +7,4 @@ before_install:
   - docker-compose ps
   - docker-compose run web bash
 script:
- - rails server
+ - bundle exec rake test
