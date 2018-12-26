@@ -7,7 +7,7 @@ services:
 before_install:
   - docker-compose build
   - docker-compose run web create
-  - docker-compose up
+  - docker-compose up -d
 script:
  - docker-compose exec web bash
  - rails test
