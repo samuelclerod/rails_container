@@ -17,8 +17,6 @@ def server
 end
 
 case ARGV[0]
-when 'ola'
-    puts 'Olá Mundo!'
 when 'server'
     server
 when 'create'
